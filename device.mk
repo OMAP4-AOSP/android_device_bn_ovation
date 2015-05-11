@@ -41,7 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     usb.product.adb=0005 \
     usb.product.mtpadb=0005 \
 
-PRODUCT_AAPT_CONFIG := xlarge hdpi xhdpi
+PRODUCT_AAPT_CONFIG := xlarge hdpi
 
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/bn/hd-common/hd-common-vendor.mk)
