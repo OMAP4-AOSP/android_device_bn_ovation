@@ -1,4 +1,4 @@
-import init.omap4.rc
+import init.hd-common.rc
 import init.ovation.usb.rc
 
 on fs
