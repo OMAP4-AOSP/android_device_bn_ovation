@@ -36,7 +36,7 @@ TARGET_KERNEL_VARIANT_CONFIG := android_ovation_defconfig
 # Recovery
 BOARD_RECOVERY_SWIPE := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../$(COMMON_FOLDER)/recovery/recovery_keys.c
-TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/root/fstab.ovation
+TARGET_RECOVERY_FSTAB := $(COMMON_FOLDER)/root/fstab.hd-common
 RECOVERY_FSTAB_VERSION := 2
 
 #Config for building TWRP

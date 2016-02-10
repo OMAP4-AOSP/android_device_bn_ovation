@@ -23,17 +23,20 @@
 DEVICE_FOLDER := device/bn/ovation
 TARGET_BOOTLOADER_BOARD_NAME := ovation
 
-$(call inherit-product, device/bn/common/common.mk)
+COMMON_FOLDER := device/bn/common
+$(call inherit-product, $(COMMON_FOLDER)/common.mk)
 
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay/aosp
 
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/root/fstab.ovation:root/fstab.ovation \
-	$(DEVICE_FOLDER)/root/init.ovation.rc:root/init.ovation.rc \
-	$(DEVICE_FOLDER)/root/init.ovation.usb.rc:root/init.ovation.usb.rc \
+	$(COMMON_FOLDER)/root/fstab.hd-common:root/fstab.ovation \
+	$(DEVICE_FOLDER)/root/init.ro.hardware.rc:root/init.ovation.rc \
+	$(COMMON_FOLDER)/root/init.ro.hardware.usb.rc:root/init.ovation.usb.rc \
 	$(COMMON_FOLDER)/recovery/init.recovery.hd-common.rc:/root/init.recovery.ovation.rc \
-	$(DEVICE_FOLDER)/root/ueventd.ovation.rc:root/ueventd.ovation.rc \
+	$(COMMON_FOLDER)/root/ueventd.hd-common.rc:root/ueventd.ovation.rc \
+
+PRODUCT_COPY_FILES += $(COMMON_FOLDER)/root/initlogo.rle:root/initlogo.rle \
 
 # Device settings
 PRODUCT_PROPERTY_OVERRIDES += \
