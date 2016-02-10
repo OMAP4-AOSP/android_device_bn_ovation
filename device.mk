@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/root/fstab.ovation:root/fstab.ovation \
 	$(DEVICE_FOLDER)/root/init.ovation.rc:root/init.ovation.rc \
 	$(DEVICE_FOLDER)/root/init.ovation.usb.rc:root/init.ovation.usb.rc \
-	$(DEVICE_FOLDER)/recovery/init.recovery.ovation.rc:/root/init.recovery.ovation.rc \
+	$(COMMON_FOLDER)/recovery/init.recovery.hd-common.rc:/root/init.recovery.ovation.rc \
 	$(DEVICE_FOLDER)/root/ueventd.ovation.rc:root/ueventd.ovation.rc \
 
 # Device settings
